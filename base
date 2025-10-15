@@ -1,0 +1,41 @@
+[ {
+    "nome": "Direito Civil e Familiar",
+    "descricao": "Questões como divórcio, inventários, heranças, contratos e relações de consumo.",
+    "imagem": "#"
+  },
+  {
+    "nome": "Direito do Consumidor",
+    "descricao": "Defesa de consumidores em casos envolvendo bancos, planos de saúde, telefonia, entre outros.",
+    "imagem": "#"
+  },
+  {
+    "nome": "Direito Empresarial",
+    "descricao": "Assessoria jurídica para empresas, incluindo direito tributário e contratual.",
+    "imagem": "#"
+  },
+  {
+    "nome": "Direito Trabalhista",
+    "descricao": "Atuação em casos de demissões, horas extras, vínculos empregatícios e verbas rescisórias.",
+    "imagem": "#"
+  },
+  {
+    "nome": "Direito Penal",
+    "descricao": "Defesa de pessoas em processos criminais.",
+    "imagem": "#"
+  },
+  {
+    "nome": "Direito Imobiliário",
+    "descricao": "Questões relacionadas a imóveis, como compra, venda, locação e disputas.",
+    "imagem": "#"
+  },
+  {
+    "nome": "Direito Previdenciário",
+    "descricao": "Casos relacionados a aposentadoria, pensões e benefícios do INSS.",
+    "imagem": "#"
+  },
+  {
+    "nome": "Direito Digital/Tecnologia",
+    "descricao": "Questões jurídicas relacionadas à tecnologia e internet.",
+    "imagem": "#"
+  }
+]
