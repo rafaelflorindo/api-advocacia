@@ -2,12 +2,27 @@ const express = require("express");
 const sequelize = require("./dataBase");
 const Servicos = require("./modelos/Servicos");
 const cors = require("cors");
+const multer = require ("multer")
+
+
 
 const app = express();
 
 app.use(cors())
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
+
+// 📁 Configuração do armazenamento
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, "uploads/"); // Pasta onde o arquivo será salvo
+    },
+    filename: function (req, file, cb) {
+      cb(null, Date.now() + "-" + file.originalname); // Gera um nome único
+    },
+  });
+  
+  const upload = multer({ storage });
 
 const port = 5000;
 
@@ -42,6 +57,29 @@ app.post("/servico", async (req, res) => {
         })
     }
 })
+
+
+
+// 🚀 Rota para cadastrar serviço com imagem
+/*
+app.post("/servico", upload.single("imagem"), async (req, res) => {
+    const { nome, descricao } = req.body;
+    const imagem = req.file ? req.file.filename : null;
+  
+    try {
+      const servico = await Servicos.create({ nome, descricao, imagem });
+      res.status(201).json({
+        servico,
+        mensagem: "Serviço cadastrado com sucesso!",
+      });
+    } catch (error) {
+      console.error("Erro ao cadastrar serviço:", error);
+      res.status(400).json({
+        erro: "Erro ao inserir o registro",
+      });
+    }
+  });*/
+
 
 app.get("/servicos", async (req, res) => {
     try {

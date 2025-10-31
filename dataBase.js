@@ -5,11 +5,11 @@ const sequelize = new Sequelize({
     storage:"./database.sqlite",
 })
 
-
 module.exports = sequelize;
+
 */
 
-//npm install mysql2
+
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize("projetoadvocacia", "root", "", {
